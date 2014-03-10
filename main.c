@@ -3,9 +3,8 @@
 
 int main()
 {
-    int i=9;
-
-    char A[100000];
+    int i=0;
+    char A[12];//這邊必須設比10大2，因為要抓\n
     FILE *fptr;
     fptr = fopen("data.txt", "r");
 
@@ -14,7 +13,8 @@ int main()
      printf("Error!!");
        }
 
-while (fgets(A,100000,fptr)!= NULL){
+while (fgets(A,12,fptr)!= NULL){
+        //抓每一行12個字元(包括\n)
 
      /* caculate s*/
 
